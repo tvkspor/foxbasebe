@@ -13,6 +13,7 @@ import lombok.experimental.FieldDefaults;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
     Long bookId;
 
     String title;
