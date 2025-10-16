@@ -1,3 +1,9 @@
+package com.be.java.foxbase.db.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
 @Entity
 @Table(name = "users")
 @Data
