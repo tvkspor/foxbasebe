@@ -9,8 +9,8 @@ COPY . .
 # Cấp quyền thực thi cho gradlew
 RUN chmod +x gradlew
 
-# Build mà không chạy test để giảm thời gian
-RUN ./gradlew clean build -x test --stacktrace --info --no-daemon
+# build với chế độ verbose để thấy lỗi thật
+RUN ./gradlew clean build -x test --stacktrace --info --warning-mode all --no-daemon
 
 
 # ---------- STAGE 2: RUNTIME ----------
