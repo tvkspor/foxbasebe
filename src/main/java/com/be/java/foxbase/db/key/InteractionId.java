@@ -1,6 +1,6 @@
 package com.be.java.foxbase.db.key;
 
-import jakarta.persistence.Embeddable;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
