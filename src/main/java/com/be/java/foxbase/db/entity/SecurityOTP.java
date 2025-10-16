@@ -24,6 +24,7 @@ public class SecurityOTP {
     LocalDateTime tokenExpiryTime;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner")
+    @JoinColumn(name = "owner", referencedColumnName = "username")
     User user;
+
 }
