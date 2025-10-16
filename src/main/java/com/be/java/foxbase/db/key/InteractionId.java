@@ -15,7 +15,13 @@ import java.io.Serializable;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class InteractionId implements Serializable {
+
+    @Column(name = "interact_username", length = 255)
     String interactUsername;
+
+    @Column(name = "creator_username", length = 255)
     String creatorUsername;
+
+    @Column(name = "rated_book_id")
     Long ratedBookId;
 }

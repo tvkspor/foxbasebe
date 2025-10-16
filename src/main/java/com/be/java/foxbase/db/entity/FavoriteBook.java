@@ -17,11 +17,11 @@ public class FavoriteBook {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("username")
-    @JoinColumn(name = "username")
+    @JoinColumn(name = "username", referencedColumnName = "username")
     User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("bookId")
-    @JoinColumn(name = "book_id")
+    @JoinColumn(name = "book_id", referencedColumnName = "book_id")
     Book book;
 }

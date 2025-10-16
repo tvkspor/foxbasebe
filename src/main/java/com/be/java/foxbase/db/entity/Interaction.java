@@ -18,15 +18,16 @@ public class Interaction {
 
     @ManyToOne
     @MapsId("interactUsername")
-    @JoinColumn(name = "interact_username")
+    @JoinColumn(name = "interact_username", referencedColumnName = "username")
     User interact;
 
     @ManyToOne
     @JoinColumns({
-            @JoinColumn(name = "creatorUsername", referencedColumnName = "creator_username", insertable = false, updatable = false),
-            @JoinColumn(name = "ratedBookId", referencedColumnName = "rated_book_id", insertable = false, updatable = false)
+        @JoinColumn(name = "creator_username", referencedColumnName = "creator_username", insertable = false, updatable = false),
+        @JoinColumn(name = "rated_book_id", referencedColumnName = "rated_book_id", insertable = false, updatable = false)
     })
     Rating rating;
+
 
     @Enumerated(EnumType.STRING)
     InteractionType action;

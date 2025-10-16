@@ -13,6 +13,10 @@ import java.io.Serializable;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @EqualsAndHashCode
 public class UserBookRatingId implements Serializable {
+
+    @Column(name = "creator_username", length = 255)
     String creatorUsername;
+
+    @Column(name = "rated_book_id")
     Long ratedBookId;
 }

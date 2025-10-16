@@ -17,7 +17,7 @@ public class PublishedBook {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("username")
-    @JoinColumn(name = "username")
+    @JoinColumn(name = "username", referencedColumnName = "username")
     User user;
 
     @OneToOne(fetch = FetchType.LAZY)
