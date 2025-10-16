@@ -10,7 +10,7 @@ COPY . .
 RUN chmod +x gradlew
 
 # Build mà không chạy test để giảm thời gian
-RUN ./gradlew clean build -x test
+RUN ./gradlew clean build -x test --stacktrace --info --no-daemon
 
 
 # ---------- STAGE 2: RUNTIME ----------
